@@ -1,0 +1,49 @@
+paths:
+  /settings:
+    post:
+      description: insert department
+      tags:
+        - department
+      parameters:
+        - in: body
+          name: body
+          description: insert department
+          schema:
+            type: object
+            properties: 
+              id:
+                type: integer
+              name:
+                type: string
+              isDeleted:
+                type: boolean
+              createAt:
+                type: string
+              modifiedAt:
+                type: string
+               
+      responses:     
+        200:
+          description: insert Department Successfully
+          schema:
+            type: object
+            properties: 
+              id:
+                type: integer
+              name:
+                type: string
+              isDeleted:
+                type: boolean
+              createAt:
+                type: string
+              modifiedAt:
+                type: string
+            example: 
+              employee: [{
+                "id":1,
+                "name":"node",
+                "isDeleted":false,
+                "createAt":"2023-05-12",
+                "modifiedAt":"2023-05-12"
+              }]
+         

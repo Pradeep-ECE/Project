@@ -1,0 +1,47 @@
+paths:
+  /settings/deleteRole:
+    post:
+      description: delete role
+      tags:
+        - role
+      parameters:
+        - in: body
+          name: body
+          description: delete role
+          schema:
+            type: object
+            properties: 
+              id:
+                type: integer
+              # name:
+              #   type: string
+              # isDeleted:
+              #   type: boolean
+              # createAt:
+              #   type: string
+              # modifiedAt:
+              #   type: string
+               
+      responses:     
+        200:
+          
+          schema:
+            type: object
+            properties: 
+              id:
+                type: integer
+              name:
+                type: string
+              isDeleted:
+                type: boolean
+              createAt:
+                type: string
+              modifiedAt:
+                type: string
+            example:  {
+                "data": [
+                  1
+                ],
+                "success": "true"
+              }
+          
